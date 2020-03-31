@@ -7,6 +7,7 @@ const forecast = require('./utils/forecast')
 //console.log(__dirname)
 console.log(path.join(__dirname,'../public'))
 const app = express()
+const port = process.env.PORT || 3000
 const publicdir = path.join(__dirname,'../public')
 
 const viewsPath = path.join(__dirname,'../templates/views')
@@ -147,6 +148,8 @@ app.get('/weather',(req,res)=>{
     res.send({forecast:'Sunny',
     location:'Sassuolo'})
 })
-app.listen(3000, () => {
-    console.log('il server sta andando sulla porta 3000')
+
+// app.listen(3000, () => {
+app.listen(port, () => {
+    console.log('il server sta andando sulla porta ' + port)
 })

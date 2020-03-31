@@ -24,8 +24,10 @@ weatherForm.addEventListener('submit',(e) => {
     messageOne.textContent = 'Loading ...'
     messageTwo.textContent = ''
 
-    let url = 'http://localhost:3000/weather?address=' + location // fiorano%20modenese'
+
+    //let url = 'http://localhost:3000/weather?address=' + location // fiorano%20modenese'
     //url = 'http://localhost:3000/weather?address=!'
+    let url = '/weather?address=' + location // fiorano%20modenese'
     fetch(url).then(
         ((response)=>{
             response.json().then(
