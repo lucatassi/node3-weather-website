@@ -151,5 +151,5 @@ app.get('/weather',(req,res)=>{
 
 // app.listen(3000, () => {
 app.listen(port, () => {
-    console.log('il server sta andando sulla porta ' + port)
+    console.log('il server sta andando sulla porta ' + port)  
 })
